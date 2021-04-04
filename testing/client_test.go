@@ -9,7 +9,8 @@ import (
 
 func TestSNMPArguments(t *testing.T) {
 	args := &snmpgo.SNMPArguments{Version: 2}
-	err := snmpgo.ArgsValidate(args)
+	//err := snmpgo.ArgsValidate(args)
+	err := args.validate()
 	if err == nil {
 		t.Error("validate() - version check")
 	}

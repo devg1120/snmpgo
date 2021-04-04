@@ -114,6 +114,10 @@ func toHexStr(a []byte, sep string) string {
 	return strings.Join(s, sep)
 }
 
+func ToHexStr(a []byte, sep string) string {
+	return toHexStr(a, sep)
+}
+
 func escape(s interface{}) string {
 	r, _ := json.Marshal(s)
 	return string(r)
